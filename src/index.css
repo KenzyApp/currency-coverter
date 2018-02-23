@@ -34,6 +34,31 @@ html, body, #root, .App {
     transform: rotate(360deg); } }
 
 .Converter {
-  display: inline-grid; }
-  .Converter .from-input {
-    width: 250px; }
+  display: inline-grid;
+  font-size: 15px;
+  width: 100%;
+  max-height: 50%; }
+  .Converter .from-input, .Converter .currency-select {
+    width: 200px;
+    margin: auto; }
+  .Converter label {
+    padding: 15px; }
+  .Converter .result {
+    display: grid;
+    padding-top: 80px; }
+    .Converter .result .result-title {
+      font-size: 25px; }
+    .Converter .result .result-amount {
+      font-size: 40px;
+      background: linear-gradient(to right, #195a09 20%, #292906 40%, #45b90f 60%, black 80%);
+      background-size: 200% auto;
+      color: #000;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 2s linear infinite; }
+
+@keyframes shine {
+  to {
+    background-position: 200% center; } }

@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { getRates } from '../../actions';
 import React, { Component } from 'react';
-import Converter from '../Converter/Converter';
+import Converter from '../../components/Converter/Converter';
 
 const mapStateToProps = (state) => {
   return {

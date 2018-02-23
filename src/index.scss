@@ -12,5 +12,7 @@ html, body, #root, .App {
 
 // containers
 @import './containers/App/App';
-@import './containers/Converter/Converter';
+
+// components
+@import './components/Converter/Converter';
 

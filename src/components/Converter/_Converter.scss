@@ -1,0 +1,47 @@
+.Converter {
+
+    display: inline-grid;
+    font-size: 15px;
+    width: 100%;
+    max-height: 50%;
+
+    .from-input, .currency-select {
+        width: 200px;
+        margin: auto;
+    }
+
+    label {
+        padding: 15px;
+    }
+
+    .result {
+        display: grid;
+        padding-top: 80px;
+
+        .result-title {
+            font-size: 25px;
+        }
+
+        .result-amount {
+            font-size: 40px;
+  
+            background: linear-gradient(to right, rgb(25, 90, 9) 20%, rgb(41, 41, 6) 40%, rgb(69, 185, 15) 60%, rgb(0, 0, 0) 80%);
+            background-size: 200% auto;
+  
+            color: #000;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+  
+            animation: shine 2s linear infinite;
+            @keyframes shine {
+                to {
+                background-position: 200% center;
+                }
+            }
+        }
+    }
+
+}
+
