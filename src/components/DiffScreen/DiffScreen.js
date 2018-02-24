@@ -23,15 +23,33 @@ export default class DiffScreen extends Component {
         rates: {}
     }
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            startDate: '',
+            endDate: ''
+        }
+    }
+
     onDateRangeChange = (range) => {
         const startDate = range[0].format('YYYY-MM-DD');
         const endDate = range[1].format('YYYY-MM-DD');
 
-        this.props.getArchivedRates(
-            this.props.currency,
+        this.setState({
+            ...this.state,
             startDate,
             endDate
-        );
+        });
+    }
+
+    componentDidUpdate() {
+        if (this.state.startDate && this.state.endDate && this.props.currency) {
+            this.props.getArchivedRates(
+                this.props.currency,
+                this.state.startDate,
+                this.state.endDate
+            );
+        }
     }
 
     render() {
@@ -42,7 +60,7 @@ export default class DiffScreen extends Component {
         const amount = this.props.amount;
         const startRate = this.props.startRate;
         const endRate = this.props.endRate;
-        const showDiff = startRate && endRate && amount;;
+        const showDiff = startRate && endRate && amount > 0 && this.props.currency;
 
         const firstAmount = amount * startRate;
         const secondAmount = amount * endRate;
