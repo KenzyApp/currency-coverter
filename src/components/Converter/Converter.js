@@ -37,7 +37,6 @@ export default class Converter extends Component {
         const currency = this.props.currency;
         const rate = this.props.rates[currency];
         const showResult = !!amount && !!currency;
-        console.log(amount, currency, showResult);
 
         return <div className={className}>
 

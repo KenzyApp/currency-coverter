@@ -38,7 +38,6 @@ class App extends Component {
   }
 
   render() {
-    console.log('this.props: ', this.props);
     if (this.props.errors) {
       return <div>{this.props.errors}</div>
     }
@@ -56,7 +55,6 @@ class App extends Component {
         />
         <DiffScreen amount={this.props.amount}
                     currency={this.props.currency}
-                    rates={this.props.rates}
                     getArchivedRates={this.props.getArchivedRates}
                     startRate={this.props.startRate}
                     endRate={this.props.endRate}

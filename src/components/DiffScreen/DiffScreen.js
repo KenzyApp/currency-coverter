@@ -11,7 +11,6 @@ export default class DiffScreen extends Component {
         className: PropTypes.string,
         amount: PropTypes.number,
         currency: PropTypes.string,
-        rates: PropTypes.object.isRequired,
         getArchivedRates: PropTypes.func.isRequired,
         startRate: PropTypes.number,
         endRate: PropTypes.number
@@ -19,8 +18,7 @@ export default class DiffScreen extends Component {
 
     static defaultProps = {
         amount: 0,
-        currency: '',
-        rates: {}
+        currency: ''
     }
 
     constructor(props) {
