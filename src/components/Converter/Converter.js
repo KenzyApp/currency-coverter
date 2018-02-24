@@ -26,9 +26,6 @@ export default class Converter extends Component {
     }
 
     render() {
-        // if (!this.props.rates  || (this.props.rates && Object.keys(this.props.rates).length > 0)) {
-        //     return <span>Loading!!!</span>
-        // }
         const className = classNames({
             'Converter': true,
             [this.props.className]: this.props.className
@@ -52,12 +49,11 @@ export default class Converter extends Component {
                         onChange={this.props.setCurrency}
                         className='currency-select'
                 >
-                    {Object.keys(this.props.rates).map(currencyCode => {
-
-                        return <Option key={currencyCode} value={currencyCode}>
+                    {Object.keys(this.props.rates).map(currencyCode =>
+                        <Option key={currencyCode} value={currencyCode}>
                             {currencyCode}
                         </Option>
-                    })}
+                    )}
                 </Select>
             </div>
 

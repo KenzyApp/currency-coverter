@@ -8,7 +8,7 @@ const initialAppState = {
     currency: null
 }
 
-const app = (state=initialAppState, action) => {
+export const app = (state=initialAppState, action) => {
     switch(action.type) {
         case ActionTypes.GET_RATES: 
             return {
@@ -47,7 +47,7 @@ const app = (state=initialAppState, action) => {
     }
 }
 
-const rates = (state={}, action) => {
+export const rates = (state={}, action) => {
     switch(action.type) {
         case ActionTypes.GET_RATES_FULFILLED:
             return {
@@ -65,7 +65,7 @@ const rates = (state={}, action) => {
     }
 }
 
-const errors = (state=null, action) => {
+export const errors = (state=null, action) => {
     switch(action.type) {
         case ActionTypes.GET_RATES:
         case ActionTypes.GET_RATES_FULFILLED:
