@@ -1,0 +1,25 @@
+.DiffScreen {
+
+    .diff {
+
+        padding: 80px 0 80px 0;
+        font-size: 40px;
+
+        background: linear-gradient(to right, rgb(25, 90, 9) 20%, rgb(41, 41, 6) 40%, rgb(69, 185, 15) 60%, rgb(0, 0, 0) 80%);
+        background-size: 200% auto;
+
+        color: #000;
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: shine 2s linear infinite;
+        @keyframes shine {
+            to {
+            background-position: 200% center;
+            }
+        }
+    }
+
+}
